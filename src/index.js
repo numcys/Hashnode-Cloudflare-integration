@@ -1,4 +1,3 @@
-const apollo = require('./handlers/apollo')
 const playground = require('./handlers/playground')
 const setCors = require('./utils/setCors')
 const fetchPostsFromHashnode = require('./api');
