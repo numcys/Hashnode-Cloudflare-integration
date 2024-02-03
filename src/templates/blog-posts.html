@@ -1,0 +1,12 @@
+<h1>Latest Blog Posts</h1>
+<ul>
+  {{#each posts}}
+    <li>
+      <h2><a href="{{slug}}">{{title}}</a></h2>
+      <p>{{formatMarkdown content.markdown}}</p> <small>By {{author.name}} ({{author.username}}) on {{formatDate timestamp}}</small>
+      {{#if coAuthors}}
+        <small>Co-authored with: {{#each coAuthors}}{{username}}{{#unless @last}}, {{/unless}}{{/each}}</small>
+      {{/if}}
+    </li>
+  {{/each}}
+</ul>
